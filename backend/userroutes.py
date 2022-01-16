@@ -32,7 +32,13 @@ def authenticateUser():
         password = request.json.get("password")
         userType = request.json.get("userType")
 
-        response = cur.execute('SELECT * FROM service where (service_id=%s or email=%s)', (username,username))
+        if userType == "user": 
+            response = cur.execute('SELECT * FROM user where (user_id=%s or email=%s)', (username,username))
+        elif userType == "doctor": 
+            response = cur.execute('SELECT * FROM doctor where (doctor_id=%s or email=%s)', (username,username))
+        else:
+            response = cur.execute('SELECT * FROM service where (service_id=%s or email=%s)', (username,username))
+        
         if response is None:
             return ({"message": "NO user with that ID"}), 401
         else: 
