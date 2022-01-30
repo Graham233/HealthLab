@@ -6,7 +6,7 @@ import Box from "./box";
 import Service from "./services";
 import Doctor from "./doctor"; 
 import Facilities from "./facilities";
-
+import Category from "./categories"
 
 
 export default function Intro(){
@@ -119,7 +119,7 @@ export default function Intro(){
 
 		<Box/>
 		<Service/>	
-		<Doctor/>
+		<Category/>
 		<Facilities />
 	</div>
     );
