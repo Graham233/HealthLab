@@ -39,9 +39,8 @@ export default function Register(props){
     <div classNameName="bodyform">
         <div className="signup-form">
             <form  method="post" onSubmit={submitHandler}>
-                <CheckoutSteps step1 />
 		        <h2>Sign Up</h2>
-		        <p>Please fill in this form to create an account!</p>
+		        <p>Please fill in this form to create an account</p>
 		        <hr/>
                  
                 <div className="form-group">
@@ -82,36 +81,49 @@ export default function Register(props){
                 </div>
             
                 <div className="form-group">
-                    <label className="col-form-label col-4">GENDER</label>
-                    <div className="form-check form-check-inline">
-                        <input className="form-check-input" type="radio" id="inlineCheckboxGender" name="gender" value="Male" onChange={(e)=>{setGender(e.target.value)}}/>
-                        <label className="form-check-label" for="inlineCheckboxGender"> Male</label>
+                    <div className="col-xs-6">
+                        <label className="col-form-label col-4">GENDER</label>
+                        <div class="radio ">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="Male" onChange={(e)=>{setGender(e.target.value)}}/>
+                                Male
+                            </label>
+                        </div> 
+                        <div class="radio ">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="Female" onChange={(e)=>{setGender(e.target.value)}}/>
+                                Female
+                            </label>
+                        </div>
                     </div>
-                    <div className="form-check form-check-inline">
-                        <input className="form-check-input" type="radio" id="inlineCheckboxGender2" name="gender" value="Female"  onChange={(e)=>{setGender(e.target.value)}}/>
-                        <label className="form-check-label" for="inlineCheckboxGender"> Female</label>
+
+                    <div className="col-xs-6">
+                        <label className="col-form-label col-4">Civil Status</label>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="Single" onChange={(e)=>{setStatus(e.target.value)}}/>
+                                Single
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="Married" onChange={(e)=>{setStatus(e.target.value)}}/>
+                                Married
+                            </label>
+                        </div>
+                        <div class="radio">
+                            <label>
+                                <input type="radio" name="optionsRadios" id="optionsRadios1" value="Widow" onChange={(e)=>{setStatus(e.target.value)}}/>
+                                Widow
+                            </label>
+                        </div>
                     </div>
                 </div>
+                        
 
-                <div className="form-group">
-                    <label className="col-form-label col-4">Civil Status</label>
-                    <div className="form-check form-check-inline">
-                        <input className="form-check-input" type="radio" id="civilsingle" name="Civil" value="Single" onChange={(e)=>{setStatus(e.target.value)}}/>
-                        <label className="form-check-label" for="civilsingle"> Single</label>
-                    </div>
-                    <div className="form-check form-check-inline">
-                        <input className="form-check-input" type="radio" id="civilmarried" name="Civil" value="Married" onChange={(e)=>{setStatus(e.target.value)}}/>
-                        <label className="form-check-label" for="icivilmarried"> Married</label>
-                    </div>
-                    <div className="form-check form-check-inline">
-                        <input className="form-check-input" type="radio" name="Civil" value="Widowed" id="civilwidowed" onChange={(e)=>{setStatus(e.target.value)}}/>
-                        <label className="form-check-input" for="civilwidowed"> Widowed</label>
-                    </div>
-                </div>
-
-                <div className="form-check form-check-inline">
+                {/* <div className="form-check form-check-inline">
                         <label className="form-check-input" for="civilwidowed">Username: <h3><b>{username}</b></h3> </label>
-                </div>
+                </div> */}
 
                 <div className="form-group">
                     <input type="password" className="form-control" name="password" placeholder="Enter password" value ={password} required="required" onChange={(e)=>{setPassword(e.target.value)}}/>
