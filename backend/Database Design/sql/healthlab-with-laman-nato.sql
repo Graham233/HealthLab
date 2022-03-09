@@ -600,7 +600,8 @@ CREATE TABLE `service_offered` (
   `service_id` varchar(50) NOT NULL,
   `service_name` varchar(100) NOT NULL,
   `service_cost` int(7) NOT NULL,
-  `service_waiting_time` varchar(50) NOT NULL
+  `service_waiting_time` varchar(50) NOT NULL,
+   `description` varchar(300) 
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --

@@ -18,7 +18,8 @@ import OBquestionScreen from "./screens/OBgynequestions";
 import OptalQuestionsScreen from "./screens/OptalQuestions";
 import GeneralHealthScreen from "./screens/generalhealth";
 import './App.css';
-import ServiceSignin from './screens/servicesignin';
+import RegisterService from './screens/registerService';
+import RegisterDoctor from './screens/registerDoctor';
 
 function App() {
   
@@ -101,7 +102,8 @@ function App() {
 				<Route path="/test/:id" element={<Testing/>}/>
 				<Route path='/signin' element={<UserTypeSignIn/>}/>
 				<Route path="/register" element={<Register/>}/>
-				<Route path="/registerservice" element={<ServiceSignin/>} />
+				<Route path="/registerservice" element={<RegisterService/>}/>
+				<Route path="/registerdoctor" element={<RegisterDoctor/>} />
 				<Route path ="/medhistory" element={<MedicalHistory/>}/>
 				<Route path ="/appointments" element={<AppointmentPage/>}/>
 				<Route path ="/onlineres" element={<Results/>}/>

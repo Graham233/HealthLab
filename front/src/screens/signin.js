@@ -16,7 +16,7 @@ export default function SignIn(props){
     setUserLabel(userType.charAt(0).toUpperCase() + userType.slice(1) + " ID")
     setPlaceHolder(`Enter ${userLabel} or email`)
   }, [userType, userLabel])
-
+  console.log("userType: " , userType)
     //const redirect = props.location.search ? props.location.search.split('=')[1] : "/";
     
     const userSignin = useSelector((state)=>state.userSignIn);
@@ -76,7 +76,7 @@ export default function SignIn(props){
             <div>
               <label />
               <div>
-                New user? <Link to="/register">Create your account</Link>
+                New user? <Link to={userType=="user" ? "/register": "/registerService"}>Create your account</Link>
               </div>
             </div>
           </form>
